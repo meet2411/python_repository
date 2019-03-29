@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Welcome</h1>
+<table border="1">
+	<tr>
+		<td>product id</td>
+		<td>product name</td>
+		<td>price</td>
+		<td>Edit</td>
+		<td>Delete</td>
+	</tr>
+	{% for d in data %}
+	<tr>
+		<td>{{ d.prod_id }}</td>
+		<td>{{ d.prod_name }}</td>
+		<td>{{ d.price }}</td>
+		<td><a href="/Edit?pid={{d.prod_id}}">Edit</a></td>
+		<td><a href="/Delete?pid={{d.prod_id}}">Delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+<a href="add">add new product</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="edit_action" method="POST">
+	{% csrf_token %}
+
+	<table border="1">
+	<tr><td>product_id:</td><td><input type="text" name="pid" value="{{id}}"></td></tr>
+	<tr><td>product_name:</td><td><input type="text" name="pname" value="{{name}}"></td></tr>
+	<tr><td>price:</td><td><input type="text" name="pprice" value="{{price}}"></td>
+	<tr><td rowspan="2"><input type="submit" value="edit product"></td></tr>
+	</table>
+</form>
+</body>
+</html>

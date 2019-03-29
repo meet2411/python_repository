@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="performAdd" method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="add product">
+</form>
+</body>
+</html>
